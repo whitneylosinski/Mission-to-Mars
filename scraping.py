@@ -121,41 +121,34 @@ def mars_hemispheres(browser):
     html = browser.html
     hemisphere_soup = soup(html, 'html.parser')
 
-    # Add try/except for error handling
-    try: 
-    
-        # Begin scraping.
-        html_class = hemisphere_soup.find_all('div', class_="item")
+    # Begin scraping.
+    html_class = hemisphere_soup.find_all('div', class_="item")
 
-        for item in html_class:
-            # Create a dictionary to hold the URL's
-            hemispheres = {}
+    for item in html_class:
+        # Create a dictionary to hold the URL's
+        hemispheres = {}
     
-            # Find the title for the hemisphere image
-            title = item.find('h3').text
+        # Find the title for the hemisphere image
+        title = item.find('h3').text
     
-            # Find the link for the thumbnail image and visit the link
-            first_link = item.find('div', class_="description").a['href']
-            base_hemisphere_url = "https://astrogeology.usgs.gov"
-            full_first_link = base_hemisphere_url + first_link
-            browser.visit(full_first_link)
+        # Find the link for the thumbnail image and visit the link
+        first_link = item.find('div', class_="description").a['href']
+        base_hemisphere_url = "https://astrogeology.usgs.gov"
+        full_first_link = base_hemisphere_url + first_link
+        browser.visit(full_first_link)
     
-            # Parse the new html for the new page
-            html = browser.html
-            hemisphere_img_soup = soup(html, 'html.parser')
+        # Parse the new html for the new page
+        html = browser.html
+        hemisphere_img_soup = soup(html, 'html.parser')
     
-            # Find the url to the full-resolution URL
-            full_res_url = hemisphere_img_soup.find('div', class_="wide-image-wrapper").a['href']
+        # Find the url to the full-resolution URL
+        full_res_url = hemisphere_img_soup.find('div', class_="wide-image-wrapper").a['href']
     
-            # Add the new info to the hemispheres list
-            hemispheres['img_url'] = full_res_url
-            hemispheres['title'] = title
-            print(hemispheres['img_url'])
+        # Add the new info to the hemispheres list
+        hemispheres['img_url'] = full_res_url
+        hemispheres['title'] = title
     
-            hemisphere_image_urls.append(hemispheres)
-        
-    except BaseException:
-        return None
+        hemisphere_image_urls.append(hemispheres)
         
     # 4. Print the list that holds the dictionary of each image url and title.
     return hemisphere_image_urls
