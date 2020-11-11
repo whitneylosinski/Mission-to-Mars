@@ -29,4 +29,4 @@ The purpose of this project was to create a Flask web application that scrapes s
 
 ## Summary
 
-![screenshot](screencapture-127-0-0-1-5000-2020-11-09-21_42_44.png)
+![screenshot](screenshot.png)
