@@ -9,23 +9,18 @@ The purpose of this project was to create a Flask web application that scrapes s
 4. Latest Mars Hemisphere Featured Images
 
 ## Resources
-***Software:***
-- Python 3.8
-- Jupyter Notebook (anaconda3)
-- VSCode 1.50
-- Flask 1.1 
-- Chromedriver 86.0.4240.22
-- MongoDB 4.4 
-- Pandas
-- Splinter
-- Beautiful Soup
-- Bootstrap
-
-***Websites:***
-- https://mars.nasa.gov/news/</br>
-- https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars</br>
-- https://space-facts.com/mars/</br>
-- https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars</br>
+|***Software:***                 |***Websites:***                                                                             |
+|:------------------------------ |:-------------------------------------------------------------------------------------------|
+|- Python 3.8                    |- https://mars.nasa.gov/news/</br>                                                          |
+|- Jupyter Notebook (anaconda3)  |- https://mars.nasa.gov/news/</br>                                                          |
+|- VSCode 1.50                   |- https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars</br>                          |
+|- Flask 1.1                     |- https://space-facts.com/mars/</br>                                                        |
+|- Chromedriver 86.0.4240.22     |- https://mars.nasa.gov/insight/weather/                                                    |
+|- MongoDB 4.4                   |- https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars</br> |
+|- Pandas                        |                                                                                            |
+|- Splinter                      |                                                                                            |
+|- Beautiful Soup                |                                                                                            |
+|- Bootstrap                     |                                                                                            |
 
 ## Summary
 This project was completed in five major steps as outlined below.  
